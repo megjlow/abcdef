@@ -77,7 +77,6 @@ url: 'https://gist.githubusercontent.com/anonymous/1ec6455373e830b14909/raw/317c
 				alert("SUCCESS");
 			},
 			complete: function() {
-				confirm("are you sure?";)
 				alert("complete");
 			}
 		})
