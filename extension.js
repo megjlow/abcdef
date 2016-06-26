@@ -28,7 +28,7 @@ new (function() {
 			[" ", "Change browser to %m.costumes", "searchB", "Browser"],
 			["b", "Change browser to %m.costumes", "searchB", "Browser"],
 			[" ", "Safe Search https://scratchx.org/ %s", "openScratchX", "project/xxxxx"],
-			[" ", "Go to web page: %s","goto", "scratch.mit.edu"],
+			[" ", "Go to web page: %s","goto", "http://192.168.0.15/gpio4/1"],
 			['R', 'Search %s result number %n with %m.returnVal', 'resultsX', '', 1, ''],
 			//[" ", "Search google for %s", "googleS", "scratch.mit.edu"],
 			[' ', 'Upload Extension from url %s', 'upLoad', 'https://...'],
@@ -69,7 +69,18 @@ url: 'https://gist.githubusercontent.com/anonymous/1ec6455373e830b14909/raw/317c
 	};
 
 	ext.goto = function(url) {
-		window.open("http://" + url)
+		$.ajax({
+			type: "GET",
+			url: url,
+			success: function(response){
+				// process response here
+				alert("SUCCESS");
+			},
+			complete: function() {
+				alert("complete");
+			}
+		})
+		//window.open("http://" + url)
 	};
 
 	ext.upLoad = function(url) {
