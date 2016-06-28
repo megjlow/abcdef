@@ -21,7 +21,18 @@ new (function() {
 	};
 	
 	ext.openLinkNewTab = function(url) {
-		window.open(url);
+		$.ajax({
+			type: "GET",
+			url: url,
+			success: function(response){
+				// process response here
+				alert("SUCCESS");
+			},
+			complete: function() {
+				alert("complete");
+			}
+		})
+//		window.open(url);
 	};
 	
 	ScratchExtensions.register('Link Opener', descriptor, ext);
