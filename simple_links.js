@@ -6,6 +6,7 @@ new (function() {
 		blocks: [
 			[' ', 'open link %s', 'openLink', 'http://scratch.mit.edu/'],
 			[' ', 'open link %s in new window', 'openLinkNewTab', 'http://scratch.mit.edu/'],
+			[' ', 'post request', 'POST', '']
 		],
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
 	};
@@ -15,6 +16,16 @@ new (function() {
 	ext._getStatus = function() {
 		return {status:2, msg:'Ready'};
 	};
+	
+	ext.POST(url) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: url,
+			success: function(response) {
+			}
+		});
+	}
 	
 	ext.openLink = function(url) {
 		window.location = url
