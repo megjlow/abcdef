@@ -18,7 +18,6 @@ new (function() {
 	};
 	
 	ext.POST(url) {
-	  e.preventDefault();
 	  $.ajax({
 		type: "POST",
 		url: url,
