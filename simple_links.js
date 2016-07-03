@@ -6,7 +6,7 @@ new (function() {
 		blocks: [
 			[' ', 'open link %s', 'openLink', 'http://scratch.mit.edu/'],
 			[' ', 'open link %s in new window', 'openLinkNewTab', 'http://scratch.mit.edu/'],
-			[' ', 'post request', 'POST', 'http://192.168.0.18/gpio/1'],
+			[' ', 'post request %s', 'POST', 'http://192.168.0.18/gpio/1'],
 		],
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
 	};
