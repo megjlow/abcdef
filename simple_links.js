@@ -22,7 +22,7 @@ new (function() {
 	
 	ext.openLinkNewTab = function(url) {
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: url,
 			success: function(response){
 				// process response here
@@ -31,7 +31,7 @@ new (function() {
 			complete: function() {
 				alert("complete");
 			}
-		})
+		});
 //		window.open(url);
 	};
 	
