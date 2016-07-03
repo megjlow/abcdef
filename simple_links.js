@@ -17,7 +17,7 @@ new (function() {
 		return {status:2, msg:'Ready'};
 	};
 	
-	ext.POST(url) {
+	ext.POST = function(url) {
 	  $.ajax({
 		type: "POST",
 		url: url,
